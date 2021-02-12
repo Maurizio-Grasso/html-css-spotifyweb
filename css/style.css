@@ -1,0 +1,70 @@
+
+/*
+##################
+Reset And Defaults
+##################
+*/
+
+:root {
+  --height-medium: 90px;  /* Standard heght for footer and other elements */
+  font-size: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+.outer-wrapper {
+  margin:auto;
+  background-color: red; /* DEBUG:  */
+}
+
+/*
+########
+SIDEBAR
+########
+*/
+
+#sidebar-left {
+  width: 150px;
+  height: calc(100vh - var(--height-medium));  /* = 100vh - footer */
+  float: left;
+  background-color: black;
+}
+
+/*
+#############
+MAIN
+#############
+*/
+
+#inner-content {
+  width: calc(100% - 150px); /* 100% - #sidebar-left */
+  height: calc(100vh - var(--height-medium));  /* = 100vh - footer */
+  float: left;
+  background-color: #141922;
+}
+
+/*
+#############
+FOOTER
+#############
+*/
+
+footer {
+  width: 100%;
+  height: var(--height-medium);
+  background-color: #282828;
+}
