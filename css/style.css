@@ -1,12 +1,16 @@
-
 /*
 ##################
-Reset And Defaults
+variables,
+Reset And
+Defaults
 ##################
 */
 
 :root {
   --height-medium: 90px;  /* Standard heght for footer and other elements */
+  --sidebar-width: 50px;  /* sidebar width on mobile device */
+  --color-active: #adff2f;  /* color for active-text and other elemens*/
+  --color-light: rgba(255,255,255,0.5);
   font-size: 10px;
 }
 
@@ -23,12 +27,185 @@ Reset And Defaults
 }
 
 body {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
+  color: var(--color-light);
+  font-family: 'Roboto', sans-serif;
 }
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+/*
+###########
+Typography
+###########
+ */
+
+h2 {
+  font-size: 3rem;
+  line-height: 4rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 2rem;
+  line-height: 3rem;
+}
+
+h2 ,
+h3 ,
+h4 {
+  color: white;
+}
+
+/*
+##########
+Responsive
+And
+positioning
+##########
+*/
+
+.align-x-y {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+}
+
+.align-y {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hide-on-mobile {
+  display: none;
+}
+.visible-on-mobile {
+  display: block;
+}
+
+@media screen and (min-width:768px) {
+  .hide-on-mobile {
+    display: block;  /* elements to be displayed only on wider device */
+  }
+  span.hide-on-mobile {
+    display: inline;  /* elements to be displayed only on wider device */
+  }
+  .visible-on-mobile {
+    display: none;
+  }
+}
+
+/*
+#########
+Margin,
+padding,
+sizez
+#########
+*/
 
 .outer-wrapper {
   margin:auto;
   background-color: red; /* DEBUG:  */
+}
+
+.padding-standard {
+  padding: 1rem;
+}
+.padding-more {
+  padding: 2rem;
+}
+.padding-t-more {
+  padding-top: 2rem;
+}
+.padding-l-r-standard {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.padding-l-r-more {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.padding-t-b-standard {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.padding-t-b-more {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.margin-standard {
+  margin: 1rem;
+}
+
+.margin-more {
+  margin: 2rem;
+}
+.margin-b-standard {
+  margin-bottom: 1rem;
+}
+.margin-t-standard {
+  margin-top: 1rem;
+}
+.margin-b-more {
+  margin-bottom: 2rem;
+}
+.margin-t-more {
+  margin-top: 2rem;
+}
+.margin-t-b-more {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.margin-r-more {
+  margin-right: 2rem;
+}
+.margin-l-more {
+  margin-left: 2rem;
+}
+
+/*
+#########
+bits and
+pieces
+#########
+*/
+
+ul.inline-list li {
+  display: inline-block;
+}
+
+ul li.active {
+  position: relative
+}
+ul li.active::before {
+  position: absolute;
+  content: "";
+  background-color: var(--color-active);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-uppercase {
+text-transform: uppercase;
+}
+
+.text-smaller {
+  font-size: 0.8em;
 }
 
 /*
@@ -37,29 +214,197 @@ SIDEBAR
 ########
 */
 
-#sidebar-left {
-  width: 150px;
+section#sidebar-left {
+  width: var(--sidebar-width);
   height: calc(100vh - var(--height-medium));  /* = 100vh - footer */
   float: left;
   background-color: black;
 }
 
+#sidebar-left > .inner-section {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+header nav ul li {  /* all list item inside the header menu */
+  height: calc( (var(--height-medium) - 1rem ) / 2);
+  line-height: calc( (var(--height-medium) - 1rem ) / 2);
+}
+header nav ul li.hide-on-mobile {  /* i.e. list item containing desktop logo*/
+  height: calc( var(--height-medium) - 2rem );
+  line-height: calc( var(--height-medium) - 2rem );
+}
+
+header nav ul li img {
+  max-height: 70%;
+}
+
+header nav ul li:nth-child(n+3) img {  /* any list item starting from 3rd (i.e. excluding logos)*/
+  max-height: 30px;
+  vertical-align: middle;
+}
+
+#sidebar-playlist-area {
+  flex-grow: 1;
+  overflow-y: scroll;
+}
+
+@media screen and (min-width:768px) {
+  :root {
+  --sidebar-width: 230px;  /* sidebar width on tablet and wider device */
+  }
+
+  #sidebar-left > .inner-section {
+    text-align: left;
+  }
+
+  #sidebar-left .padding-standard {
+    padding: 2rem;  /* more padding on tablet and wider devices*/
+  }
+
+  header nav ul li.active::before {
+    display: inline-block;
+    width: 3px;
+    height: 40px;
+    left: -2rem;
+    top:50%;
+    transform: translateY(-50%);
+  }
+
+  #sidebar-left h3 {
+    line-height: 2rem;
+  }
+
+  #sidebar-user-bar h3.hide-on-mobile ,
+  #sidebar-user-bar img ,
+  #sidebar-user-bar span {
+    display: inline-block;
+  }
+
+}
+
+
+#sidebar-user-bar img[src*="download"] {
+  max-height: 20px;
+}
+#sidebar-user-bar img[src*="profile"] {
+  width: 30px;
+  height: 30px;
+  background-color: var(--color-light);
+  border-radius: 50%;
+
+}
+
+#sidebar-user-bar h3 ,
+#sidebar-user-bar img ,
+#sidebar-user-bar span {
+  vertical-align: middle;
+}
+
+
+
 /*
-#############
-MAIN
-#############
+###############
+call to action
+###############
 */
 
-#inner-content {
-  width: calc(100% - 150px); /* 100% - #sidebar-left */
-  height: calc(100vh - var(--height-medium));  /* = 100vh - footer */
-  float: left;
-  background-color: #141922;
+#call-to-action {
+  position: fixed;
+  left: var(--sidebar-width);
+  right: 0;
+  height: var(--height-medium);
+  background-color: rgba(0, 0, 0, 0.25);
+}
+#call-to-action .inner-section {
+  right: 2rem;
+}
+
+#call-to-action a {
+  border-radius: 25px;
+  border: 2px solid white;
+  color: white;
 }
 
 /*
 #############
+inner content
+#############
+*/
+
+#inner-content {
+  padding-top: var(--height-medium);
+  width: calc(100% - var(--sidebar-width));
+  height: calc(100vh - var(--height-medium));  /* = 100vh - footer */
+  float: left;
+  background-color: #141922;
+  overflow: auto;
+}
+
+
+
+nav#main-menu ul {
+  font-size: 2rem;
+}
+
+nav#main-menu ul li {
+  height: calc( (var(--height-medium) - 1rem ) / 2);
+  line-height: calc( (var(--height-medium) - 1rem ) / 2);
+}
+
+#main-menu ul li.active::before {
+  display: inline-block;
+  width: 40px;
+  height: 3px;
+  bottom: 0;
+  left:50%;
+  transform: translateX(-50%);
+}
+
+.playlist-box-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.playlist-box {
+  width: calc( (100% / 2) - 1rem);
+  flex: 0 0 auto;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+}
+
+.playlist-box img {
+  width: 100%;
+}
+
+.playlist-box-container h3 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+
+@media screen and (min-width:992px) {  /* sizes on tablet */
+  .playlist-box {
+    width: calc((100% / 4) - 1rem);
+  }
+}
+@media screen and (min-width:1200px) {  /* sizes on desktop*/
+  .playlist-box {
+    width: calc((100% / 6) - 1rem);
+  }
+}
+
+
+/*
+#############
 FOOTER
+COMMON
+RULES
 #############
 */
 
@@ -67,4 +412,137 @@ footer {
   width: 100%;
   height: var(--height-medium);
   background-color: #282828;
+}
+
+footer > .inner-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+section#footer-track-info ,
+section#footer-settings-box {
+  flex: 0 1 220px;
+}
+
+footer .custom-slider {
+  height:4px;
+  border-radius: 2px;
+}
+
+
+/*
+#######
+FOOTER
+TRACK
+INFO
+#######
+*/
+
+
+#footer-track-info {
+  position: relative;
+}
+
+#footer-track-info > div > div {
+
+}
+
+#footer-track-info > div > div:nth-child(1) {
+  width: 35%;
+  left:0;
+}
+#footer-track-info > div > div:nth-child(2) {
+  width: 40%;
+  left: 35%;
+  margin-left: 5%;
+}
+#footer-track-info > div > div:nth-child(3) {
+  width: 20%;
+  right: 0;
+}
+
+#footer-track-info img {
+  max-height: calc(var(--height-medium) - 2rem);
+  max-width: 100%;
+  display: block;
+}
+
+
+/*
+#######
+FOOTER
+PLAYER
+AREA
+#######
+*/
+
+
+#footer-player-area {
+  flex: 0 2 600px;
+}
+
+#player-button-list {  /* button bar on top*/
+  height: calc((var(--height-medium) - 2rem) / 2);  /* takes 1/2 height of footer*/
+  line-height: calc((var(--height-medium) - 2rem) / 2); /* align */
+  font-size: 1.8rem;
+  color: white;
+}
+
+#player-button-list > li:nth-child(3) {
+  font-size: 2.5rem;  /* play button is slighly bigger*/
+}
+#player-button-list > li:not(:last-child) {
+  margin-right: 1.2vw;
+}
+
+
+#timeline-outer {  /* bottom bar with slider and time */
+  height: calc((var(--height-medium) - 2rem) / 2); /* takes 1/2 height of footer*/
+  position: relative;
+}
+
+#timeline-outer > span:not(span.custom-slider) {
+  width: 35px;
+}
+
+#timeline-outer > span:first-child {  /* current time*/
+  left: 0;
+}
+#timeline-outer .custom-slider {  /* actual slider */
+  width: calc(100% - 70px);
+  background-image: linear-gradient(to right , white 50%, lightgray 50%);
+}
+#timeline-outer > span:last-child {  /* total time */
+  right: 0;
+}
+
+
+/*
+#######
+FOOTER
+SETTINGS
+BOX
+#######
+*/
+
+
+section#footer-settings-box {
+  position: relative;
+  width: 100%;
+}
+
+section#footer-settings-box > .clearfix {
+  width: 100%;
+}
+
+section#footer-settings-box > .clearfix > span:not(.custom-slider) {
+  width: calc(50% / 3);
+}
+section#footer-settings-box > .clearfix > span {
+  float: left;
+}
+
+#footer-settings-box .custom-slider {
+  width:50%;
+  background-image: linear-gradient(to right , white 50%, lightgray 50%);
 }
