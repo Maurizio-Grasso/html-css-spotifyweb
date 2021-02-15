@@ -34,11 +34,11 @@
                 <!-- Logo and buttons -->
                 <nav class="margin-b-more">
                   <ul>
-                    <li class="visible-on-mobile"><img src="img/logo-small.svg" alt=""></li><!-- logo mobile -->
-                    <li class="hide-on-mobile"><img src="img/logo.svg" alt="logo Spotify"></li><!-- logo desktop -->
-                    <li class=" active"> <img src="img/home.svg" alt=""> <span class="hide-on-mobile">Home</span></li>
-                    <li class=""> <img src="img/search.svg" alt=""> <span class="hide-on-mobile">La tua libreria</span></li>
-                    <li class=""> <img src="img/libreria.svg" alt=""> <span class="hide-on-mobile">Cerca</span></li>
+                    <li class="visible-on-mobile"><a href="#"><img src="img/logo-small.svg" alt=""></a></li><!-- logo mobile -->
+                    <li class="hide-on-mobile"><a href="#"><img src="img/logo.svg" alt="logo Spotify"></a></li><!-- logo desktop -->
+                    <li class="active highlight-on-hover"><a href="#"> <img src="img/home.svg" alt=""> <span class="hide-on-mobile">Home</span></a></li>
+                    <li class="highlight-on-hover"><a href="#"> <img src="img/search.svg" alt=""> <span class="hide-on-mobile">La tua libreria</span></a></li>
+                    <li class="highlight-on-hover"><a href="#"> <img src="img/libreria.svg" alt=""> <span class="hide-on-mobile">Cerca</span></a></li>
                   </ul>
                 </nav>
               </header>
@@ -47,23 +47,25 @@
                 <!-- Playlist nav -->
                 <h3 class="margin-b-more">Playlist</h3>
                 <nav>
-                  <ul>
-                    <li class="margin-b-more">Crea Playlist</li>
-                    <li class="margin-b-more">nome playlist</li>
-                    <li class="margin-b-more">nome playlist</li>
-                    <li class="margin-b-more">nome playlist</li>
-                    <li class="margin-b-more">nome playlist</li>
-                    <li class="margin-b-more">nome playlist</li>
-                    <li class="margin-b-more">nome playlist</li>
-                    <li class="margin-b-more">nome playlist</li>
+                  <ul class="highlight-on-hover">
+                    <li class="margin-b-more"><a href="#"><span class="custom-plus-icon margin-r-standard"></span><span>Crea Playlist</span></a></li>
+                    <li class="margin-b-more"><a href="#">nome playlist</a></li>
+                    <li class="margin-b-more"><a href="#">nome playlist</a></li>
+                    <li class="margin-b-more"><a href="#">nome playlist</a></li>
+                    <li class="margin-b-more"><a href="#">nome playlist</a></li>
+                    <li class="margin-b-more"><a href="#">nome playlist</a></li>
+                    <li class="margin-b-more"><a href="#">nome playlist</a></li>
+                    <li class="margin-b-more"><a href="#">nome playlist</a></li>
                   </ul>
                 </nav><!-- Playlist menu END -->
               </section><!-- sidebar-playlist-area END -->
 
-              <section id="sidebar-user-bar" class="">
-                <a href="#"><img class="margin-b-standard" src="img/download.svg" alt=""><span class="hide-on-mobile margin-b-standard margin-l-more">Installa App</span></a>
-                <hr class="hide-on-mobile">
-                <a href="#"><img class="margin-t-standard" src="img/profile.svg" alt=""><h3 class="hide-on-mobile margin-t-standard margin-l-more">John Doe</h3></a>
+              <section id="sidebar-user-bar">
+                <div class="highlight-on-hover margin-t-more">
+                  <a href="#"><img class="margin-b-standard" src="img/download.svg" alt=""><span class="hide-on-mobile margin-b-standard margin-l-more">Installa App</span></a>
+                </div>
+                  <hr class="hide-on-mobile">
+                  <a href="#"><img class="margin-t-standard" src="img/profile.svg" alt=""><h3 class="hide-on-mobile margin-t-standard margin-l-more">John Doe</h3></a>
 
               </section><!-- sidebar-user-bar END -->
 
@@ -81,13 +83,13 @@
           <section id="inner-content" class="padding-l-r-standard">
 
             <nav id="main-menu" class="margin-b-more">
-              <ul class="inline-list text-center text-uppercase">
-                <li class="active margin-r-more">in evidenza</li>
-                <li class="margin-r-more">podcast</li>
-                <li class="margin-r-more">classifiche</li>
-                <li class="margin-r-more">generi e mood</li>
-                <li class="margin-r-more">nuove uscite</li>
-                <li>scopri</li>
+              <ul class="inline-list text-center text-uppercase highlight-on-hover">
+                <li class="active margin-r-more"><a href="#">in evidenza</a></li>
+                <li class="margin-r-more"><a href="#">podcast</a></li>
+                <li class="margin-r-more"><a href="#">classifiche</a></li>
+                <li class="margin-r-more"><a href="#">generi e mood</a></li>
+                <li class="margin-r-more"><a href="#">nuove uscite</a></li>
+                <li><a href="#">scopri</a></li>
               </ul>
             </nav><!-- main-menu END-->
 
@@ -95,57 +97,57 @@
               <h2 class="margin-b-more margin-t-standard">Recently played</h2>
               <div class="playlist-box-container text-center margin-t-more">
 
-                <div class="playlist-box">
+                <div class="playlist-box margin-t-standard margin-r-standard">
                   <div class="layover">
                     <img src="img/metal_lifting.jpg" alt="">
                     <a href="#"><i class="align-x-y far fa-play-circle"></i></a>
                   </div>
-                  <h3>Heavy Metal</h3>
+                  <h3 class="margin-t-standard margin-b-standard">Heavy Metal</h3>
                   <span>Subtitle</span>
                 </div>
 
-                <div class="playlist-box">
+                <div class="playlist-box margin-t-standard margin-r-standard">
                   <div class="layover">
                     <img src="img/stranger.jpeg" alt="">
                     <a href="#"><i class="align-x-y far fa-play-circle"></i></a>
                   </div>
-                  <h3>Stranger Things, Vol. 1 (a Netflix Original Series Soundrack)</h3>
+                  <h3 class="margin-t-standard margin-b-standard">Stranger Things, Vol. 1 (a Netflix Original Series Soundrack)</h3>
                   <span>Kyle Dixon & Michael Stein</span>
                 </div>
 
-                <div class="playlist-box">
+                <div class="playlist-box margin-t-standard margin-r-standard">
                   <div class="layover">
                     <img src="img/aquietplace.jpeg" alt="">
                     <a href="#"><i class="align-x-y far fa-play-circle"></i></a>
                   </div>
-                  <h3>A quiet place</h3>
+                  <h3 class="margin-t-standard margin-b-standard">A quiet place</h3>
                   <span>Subtitle</span>
                 </div>
 
-                <div class="playlist-box">
+                <div class="playlist-box margin-t-standard margin-r-standard">
                   <div class="layover">
                     <img src="img/split.jpeg" alt="">
                     <a href="#"><i class="align-x-y far fa-play-circle"></i></a>
                   </div>
-                  <h3>Split</h3>
+                  <h3 class="margin-t-standard margin-b-standard">Split</h3>
                   <span>Subtitle</span>
                 </div>
 
-                <div class="playlist-box">
+                <div class="playlist-box margin-t-standard margin-r-standard">
                   <div class="layover">
                     <img src="img/cure.jpeg" alt="">
                     <a href="#"><i class="align-x-y far fa-play-circle"></i></a>
                   </div>
-                  <h3>A cure for wellness</h3>
+                  <h3 class="margin-t-standard margin-b-standard">A cure for wellness</h3>
                   <span>Subtitle</span>
                 </div>
 
-                <div class="playlist-box">
+                <div class="playlist-box margin-t-standard margin-r-standard">
                   <div class="layover">
                     <img src="img/sinister.jpeg " alt="">
                     <a href="#"><i class="align-x-y far fa-play-circle"></i></a>
                   </div>
-                  <h3>Sinister</h3>
+                  <h3 class="margin-t-standard margin-b-standard">Sinister</h3>
                   <span>Subtitle</span>
                 </div>
 
@@ -158,20 +160,20 @@
 
               <div class="playlist-box-container text-center margin-t-more">
 
-                <div class="playlist-box">
+                <div class="playlist-box margin-t-standard margin-r-standard">
                   <div class="layover">
                     <img src="img/radar.jpeg" alt="">
                     <a href="#"><i class="align-x-y far fa-play-circle"></i></a>
                   </div>
-                  <h3>Relase Radar</h3>
+                  <h3 class="margin-t-standard margin-b-standard">Relase Radar</h3>
                 </div>
 
-                <div class="playlist-box">
+                <div class="playlist-box margin-t-standard margin-r-standard">
                   <div class="layover">
                     <img src="img/mixdaily.jpeg" alt="">
                     <a href="#"><i class="align-x-y far fa-play-circle"></i></a>
                   </div>
-                  <h3>Daily Mix</h3>
+                  <h3 class="margin-t-standard margin-b-standard">Daily Mix</h3>
                 </div>
 
               </div><!-- playlist-box-container END -->
@@ -181,20 +183,20 @@
               <h2 class="margin-b-more margin-t-standard">Artisti più popolari</h2>
               <p>Più ascolti, più accurati saranno i suggerimenti.</p>
               <div class="playlist-box-container text-center margin-t-more">
-                <div class="playlist-box">
+                <div class="playlist-box margin-t-standard margin-r-standard">
                   <div class="layover">
                     <img src="img/youg.jpeg" alt="">
                     <a href="#"><i class="align-x-y far fa-play-circle"></i></a>
                   </div>
-                  <h3>Lana del Rey</h3>
+                  <h3 class="margin-t-standard margin-b-standard">Lana del Rey</h3>
                 </div>
 
-                <div class="playlist-box">
+                <div class="playlist-box margin-t-standard margin-r-standard">
                   <div class="layover">
                     <img src="img/einaudi.jpeg" alt="">
                     <a href="#"><i class="align-x-y far fa-play-circle"></i></a>
                   </div>
-                  <h3>Ludovico Einaudi</h3>
+                  <h3 class="margin-t-standard margin-b-standard">Ludovico Einaudi</h3>
                 </div>
 
               </div><!-- playlist-box-container END -->
@@ -218,12 +220,12 @@
 
               <div class="align-y text-smaller">
                 <h4>Sinister</h4>
-                <span>Brano Musicale</span>
+                <span class="highlight-on-hover"><a href="#">Brano Musicale</a></span>
               </div>
 
-              <div class="text-right align-y">
-                <i class="far fa-folder"></i>
-                <i class="far fa-heart"></i>
+              <div class="text-right align-y highlight-on-hover">
+                <a href="#"><i class="far fa-folder"></i></a>
+                <a href="#"><i class="far fa-heart"></i></a>
               </div>
 
             </div>
@@ -233,11 +235,11 @@
           <section id="footer-player-area">
 
             <ul id="player-button-list" class="inline-list text-center">
-              <li><i class="fas fa-random"></i></li>
-              <li><i class="fas fa-step-backward"></i></li>
-              <li><i class="far fa-play-circle"></i></li>
-              <li><i class="fas fa-step-forward"></i></li>
-              <li><i class="fas fa-redo"></i></li>
+              <li><a href="#"><i class="fas fa-random"></i></a></li>
+              <li><a href="#"><i class="fas fa-step-backward"></i></a></li>
+              <li><a href="#"><i class="far fa-play-circle"></i></a></li>
+              <li><a href="#"><i class="fas fa-step-forward"></i></a></li>
+              <li><a href="#"><i class="fas fa-redo"></i></a></li>
             </ul>
 
             <div class="slider-outer text-center text-smaller">
@@ -254,9 +256,9 @@
           <section id="footer-settings-box">
 
             <div class="slider-outer clearfix align-x-y">
-              <span><i class="fas fa-bars"></i></span>
-              <span><i class="fas fa-desktop"></i></span>
-              <span><i class="fas fa-volume-up"></i></span>
+              <span><a href=""><i class="fas fa-bars"></i></a></span>
+              <span><a href=""><i class="fas fa-desktop"></i></a></span>
+              <span><a href=""><i class="fas fa-volume-up"></i></a></span>
               <div class="custom-slider align-y">
                 <div class="fill-bar">
 
