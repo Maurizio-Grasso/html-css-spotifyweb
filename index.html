@@ -1,277 +1,269 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
+<head>
+  <meta charset="utf-8">
 
-    <!-- Font Awesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
 
-    <!-- Google Font Roboto -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <!-- Google Font Roboto -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
 
-    <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify: Listening is everything</title>
+</head>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<body>
+  <div class="outer-wrapper">
+    <main>
 
-    <title>Spotify: Listening is everything</title>
-  </head>
+      <div class="clearfix"> <!-- Main Wrapper containing sidebar, main content area and call to action top bar-->
 
-  <body>
+        <section id="sidebar-left">
 
-    <div class="outer-wrapper">
+          <div class="inner-section padding-standard text-center">
+            <header>
+              <nav class="margin-b-more"><!-- Header nav (Logo and buttons) -->
+                <ul>
+                  <li class="visible-on-mobile"><a href="#"><img src="img/logo-small.svg" alt=""></a></li><!-- logo mobile -->
+                  <li class="hide-on-mobile"><a href="#"><img src="img/logo.svg" alt="logo Spotify"></a></li><!-- logo desktop -->
+                  <li class="active highlight-on-hover"><a href="#"> <img src="img/home.svg" alt=""> <span class="hide-on-mobile">Home</span></a></li>
+                  <li class="highlight-on-hover"><a href="#"> <img src="img/search.svg" alt=""> <span class="hide-on-mobile">La tua libreria</span></a></li>
+                  <li class="highlight-on-hover"><a href="#"> <img src="img/libreria.svg" alt=""> <span class="hide-on-mobile">Cerca</span></a></li>
+                </ul>
+              </nav><!-- sidebar header nav END -->
+            </header>
 
-      <main>
+            <section id="sidebar-playlist-area" class="hide-on-mobile margin-t-more padding-t-more"><!-- Playlist section-->
+              <h3 class="margin-b-more text-white">Playlist</h3>
+              <nav><!-- Playlist nav -->
+                <ul class="highlight-on-hover">
+                  <li class="margin-b-more"><a href="#"><span class="custom-plus-icon margin-r-standard text-center"></span><span>Crea Playlist</span></a></li>
+                  <li class="margin-b-more"><a href="#">nome playlist</a></li>
+                  <li class="margin-b-more"><a href="#">nome playlist</a></li>
+                  <li class="margin-b-more"><a href="#">nome playlist</a></li>
+                  <li class="margin-b-more"><a href="#">nome playlist</a></li>
+                  <li class="margin-b-more"><a href="#">nome playlist</a></li>
+                  <li class="margin-b-more"><a href="#">nome playlist</a></li>
+                  <li class="margin-b-more"><a href="#">nome playlist</a></li>
+                </ul>
+              </nav><!-- Playlist nav END -->
+            </section><!-- Playlist section END -->
 
-        <div class="clearfix"><!-- Main Wrapper -->
-
-          <section id="sidebar-left">
-
-            <div class="inner-section padding-standard text-center">
-
-              <header>
-                <!-- Logo and buttons -->
-                <nav class="margin-b-more">
-                  <ul>
-                    <li class="visible-on-mobile"><a href="#"><img src="img/logo-small.svg" alt=""></a></li><!-- logo mobile -->
-                    <li class="hide-on-mobile"><a href="#"><img src="img/logo.svg" alt="logo Spotify"></a></li><!-- logo desktop -->
-                    <li class="active highlight-on-hover"><a href="#"> <img src="img/home.svg" alt=""> <span class="hide-on-mobile">Home</span></a></li>
-                    <li class="highlight-on-hover"><a href="#"> <img src="img/search.svg" alt=""> <span class="hide-on-mobile">La tua libreria</span></a></li>
-                    <li class="highlight-on-hover"><a href="#"> <img src="img/libreria.svg" alt=""> <span class="hide-on-mobile">Cerca</span></a></li>
-                  </ul>
-                </nav>
-              </header>
-
-              <section id="sidebar-playlist-area" class="hide-on-mobile margin-t-more padding-t-more">
-                <!-- Playlist nav -->
-                <h3 class="margin-b-more">Playlist</h3>
-                <nav>
-                  <ul class="highlight-on-hover">
-                    <li class="margin-b-more"><a href="#"><span class="custom-plus-icon margin-r-standard"></span><span>Crea Playlist</span></a></li>
-                    <li class="margin-b-more"><a href="#">nome playlist</a></li>
-                    <li class="margin-b-more"><a href="#">nome playlist</a></li>
-                    <li class="margin-b-more"><a href="#">nome playlist</a></li>
-                    <li class="margin-b-more"><a href="#">nome playlist</a></li>
-                    <li class="margin-b-more"><a href="#">nome playlist</a></li>
-                    <li class="margin-b-more"><a href="#">nome playlist</a></li>
-                    <li class="margin-b-more"><a href="#">nome playlist</a></li>
-                  </ul>
-                </nav><!-- Playlist menu END -->
-              </section><!-- sidebar-playlist-area END -->
-
-              <section id="sidebar-user-bar">
-                <div class="highlight-on-hover margin-t-more">
-                  <a href="#"><img class="margin-b-standard" src="img/download.svg" alt=""><span class="hide-on-mobile margin-b-standard margin-l-more">Installa App</span></a>
-                </div>
-                  <hr class="hide-on-mobile">
-                  <a href="#"><img class="margin-t-standard" src="img/profile.svg" alt=""><h3 class="hide-on-mobile margin-t-standard margin-l-more">John Doe</h3></a>
-
-              </section><!-- sidebar-user-bar END -->
-
-            </div><!-- inner-sidebar END -->
-          </section><!-- sidebar-left END -->
-
-          <aside id="call-to-action" class="padding-more text-right">
-            <div class="inner-section padding-standard align-y">
-              <a class="text-uppercase padding-l-r-more padding-t-b-standard" href="#"><span class="padding-standard">effettua l'upgrade</span></a>
-            </div>
-          </aside>
-
-
-
-          <section id="inner-content" class="padding-l-r-standard">
-
-            <nav id="main-menu" class="margin-b-more">
-              <ul class="inline-list text-center text-uppercase highlight-on-hover">
-                <li class="active margin-r-more"><a href="#">in evidenza</a></li>
-                <li class="margin-r-more"><a href="#">podcast</a></li>
-                <li class="margin-r-more"><a href="#">classifiche</a></li>
-                <li class="margin-r-more"><a href="#">generi e mood</a></li>
-                <li class="margin-r-more"><a href="#">nuove uscite</a></li>
-                <li><a href="#">scopri</a></li>
-              </ul>
-            </nav><!-- main-menu END-->
-
-            <section id="recently-played" class="padding-standard">
-              <h2 class="margin-b-more margin-t-standard">Recently played</h2>
-              <div class="playlist-box-container text-center margin-t-more">
-
-                <div class="playlist-box margin-t-standard margin-r-standard">
-                  <div class="layover">
-                    <img src="img/metal_lifting.jpg" alt="">
-                    <a href="#"><i class="align-x-y far fa-play-circle"></i></a>
-                  </div>
-                  <h3 class="margin-t-standard margin-b-standard">Heavy Metal</h3>
-                  <span>Subtitle</span>
-                </div>
-
-                <div class="playlist-box margin-t-standard margin-r-standard">
-                  <div class="layover">
-                    <img src="img/stranger.jpeg" alt="">
-                    <a href="#"><i class="align-x-y far fa-play-circle"></i></a>
-                  </div>
-                  <h3 class="margin-t-standard margin-b-standard">Stranger Things, Vol. 1 (a Netflix Original Series Soundrack)</h3>
-                  <span>Kyle Dixon & Michael Stein</span>
-                </div>
-
-                <div class="playlist-box margin-t-standard margin-r-standard">
-                  <div class="layover">
-                    <img src="img/aquietplace.jpeg" alt="">
-                    <a href="#"><i class="align-x-y far fa-play-circle"></i></a>
-                  </div>
-                  <h3 class="margin-t-standard margin-b-standard">A quiet place</h3>
-                  <span>Subtitle</span>
-                </div>
-
-                <div class="playlist-box margin-t-standard margin-r-standard">
-                  <div class="layover">
-                    <img src="img/split.jpeg" alt="">
-                    <a href="#"><i class="align-x-y far fa-play-circle"></i></a>
-                  </div>
-                  <h3 class="margin-t-standard margin-b-standard">Split</h3>
-                  <span>Subtitle</span>
-                </div>
-
-                <div class="playlist-box margin-t-standard margin-r-standard">
-                  <div class="layover">
-                    <img src="img/cure.jpeg" alt="">
-                    <a href="#"><i class="align-x-y far fa-play-circle"></i></a>
-                  </div>
-                  <h3 class="margin-t-standard margin-b-standard">A cure for wellness</h3>
-                  <span>Subtitle</span>
-                </div>
-
-                <div class="playlist-box margin-t-standard margin-r-standard">
-                  <div class="layover">
-                    <img src="img/sinister.jpeg " alt="">
-                    <a href="#"><i class="align-x-y far fa-play-circle"></i></a>
-                  </div>
-                  <h3 class="margin-t-standard margin-b-standard">Sinister</h3>
-                  <span>Subtitle</span>
-                </div>
-
-              </div><!-- playlist-box-container END -->
-            </section><!-- recently-played section END -->
-
-            <section id="created-for-you" class="padding-standard">
-              <h2 class="margin-b-more margin-t-standard">Creato per John Doe</h2>
-              <p>Più ascolti, più accurati saranno i suggerimenti.</p>
-
-              <div class="playlist-box-container text-center margin-t-more">
-
-                <div class="playlist-box margin-t-standard margin-r-standard">
-                  <div class="layover">
-                    <img src="img/radar.jpeg" alt="">
-                    <a href="#"><i class="align-x-y far fa-play-circle"></i></a>
-                  </div>
-                  <h3 class="margin-t-standard margin-b-standard">Relase Radar</h3>
-                </div>
-
-                <div class="playlist-box margin-t-standard margin-r-standard">
-                  <div class="layover">
-                    <img src="img/mixdaily.jpeg" alt="">
-                    <a href="#"><i class="align-x-y far fa-play-circle"></i></a>
-                  </div>
-                  <h3 class="margin-t-standard margin-b-standard">Daily Mix</h3>
-                </div>
-
-              </div><!-- playlist-box-container END -->
-            </section><!-- created-for-you section END -->
-
-            <section id="most-popular-artists" class="padding-standard">
-              <h2 class="margin-b-more margin-t-standard">Artisti più popolari</h2>
-              <p>Più ascolti, più accurati saranno i suggerimenti.</p>
-              <div class="playlist-box-container text-center margin-t-more">
-                <div class="playlist-box margin-t-standard margin-r-standard">
-                  <div class="layover">
-                    <img src="img/youg.jpeg" alt="">
-                    <a href="#"><i class="align-x-y far fa-play-circle"></i></a>
-                  </div>
-                  <h3 class="margin-t-standard margin-b-standard">Lana del Rey</h3>
-                </div>
-
-                <div class="playlist-box margin-t-standard margin-r-standard">
-                  <div class="layover">
-                    <img src="img/einaudi.jpeg" alt="">
-                    <a href="#"><i class="align-x-y far fa-play-circle"></i></a>
-                  </div>
-                  <h3 class="margin-t-standard margin-b-standard">Ludovico Einaudi</h3>
-                </div>
-
-              </div><!-- playlist-box-container END -->
-            </section><!-- most-popular-artists section END -->
-          </section><!-- inner-content END -->
-
-        </div><!-- main-wrapper END -->
-
-      </main>
-
-      <footer>
-
-        <div class="inner-section padding-standard">
-
-          <section id="footer-track-info" >
-            <div class="">
-
-              <div class="align-y">
-                <img src="img/sinister.jpeg" alt="">
+            <section id="sidebar-user-bar"> <!-- bottom user bar section -->
+              <div class="highlight-on-hover margin-t-more">
+                <a href="#"><img class="margin-b-standard" src="img/download.svg" alt=""><span class="hide-on-mobile margin-b-standard margin-l-more">Installa App</span></a>
               </div>
+              <hr class="hide-on-mobile">
+              <a href="#"><img class="margin-t-standard" src="img/profile.svg" alt=""><h3 class="hide-on-mobile margin-t-standard margin-l-more text-white">John Doe</h3></a>
+            </section><!-- User bar section END -->
 
-              <div class="align-y text-smaller">
-                <h4>Sinister</h4>
-                <span class="highlight-on-hover"><a href="#">Brano Musicale</a></span>
-              </div>
+          </div><!-- inner-sidebar END -->
+        </section><!-- sidebar section END -->
 
-              <div class="text-right align-y highlight-on-hover">
-                <a href="#"><i class="far fa-folder"></i></a>
-                <a href="#"><i class="far fa-heart"></i></a>
-              </div>
+        <aside id="call-to-action" class="padding-more text-right"><!-- Top bar containing call to action -->
+          <div class="inner-section padding-standard align-y">
+            <a class="padding-l-r-more padding-b-standard padding-t-standard text-uppercase text-white" href="#"><span class="padding-standard">effettua l'upgrade</span></a>
+          </div><!-- call to action inner section END -->
+        </aside><!-- call to action section end END -->
 
-            </div>
+        <section id="inner-content" class="padding-standard">  <!-- main area-->
 
-          </section> <!-- footer-track-info section END -->
-
-          <section id="footer-player-area">
-
-            <ul id="player-button-list" class="inline-list text-center">
-              <li><a href="#"><i class="fas fa-random"></i></a></li>
-              <li><a href="#"><i class="fas fa-step-backward"></i></a></li>
-              <li><a href="#"><i class="far fa-play-circle"></i></a></li>
-              <li><a href="#"><i class="fas fa-step-forward"></i></a></li>
-              <li><a href="#"><i class="fas fa-redo"></i></a></li>
+          <nav id="main-menu" class="margin-b-more"><!-- main menu -->
+            <ul class="inline-list text-center text-uppercase highlight-on-hover">
+              <li class="active margin-r-more"><a href="#">in evidenza</a></li>
+              <li class="margin-r-more"><a href="#">podcast</a></li>
+              <li class="margin-r-more"><a href="#">classifiche</a></li>
+              <li class="margin-r-more"><a href="#">generi e mood</a></li>
+              <li class="margin-r-more"><a href="#">nuove uscite</a></li>
+              <li><a href="#">scopri</a></li>
             </ul>
+          </nav><!-- main-menu END-->
 
-            <div class="slider-outer text-center text-smaller">
-              <span class="align-y">0:25</span>
-              <div id="timeline-bar" class="custom-slider align-x-y">
-                <div class="fill-bar"></div>
-              </div>
-              <span class="align-y">4:35</span>
-            </div>
+          <section id="recently-played" class="padding-standard">  <!-- Recently-played section (1 out of 3)-->
 
-          </section><!-- footer-player-area END -->
+            <h2 class="margin-b-more margin-t-standard text-white">Recently played</h2>
+            <div class="playlist-box-container text-center margin-t-more">
 
-
-          <section id="footer-settings-box">
-
-            <div class="slider-outer clearfix align-x-y">
-              <span><a href=""><i class="fas fa-bars"></i></a></span>
-              <span><a href=""><i class="fas fa-desktop"></i></a></span>
-              <span><a href=""><i class="fas fa-volume-up"></i></a></span>
-              <div class="custom-slider align-y">
-                <div class="fill-bar">
-
+              <div class="playlist-box margin-t-standard margin-r-standard"><!-- Item #1 -->
+                <div class="layover">
+                  <img src="img/metal_lifting.jpg" alt="">
+                  <a href="#"><i class="align-x-y text-white far fa-play-circle"></i></a>
                 </div>
-              </div>
+                <h3 class="margin-t-standard margin-b-standard text-white">Heavy Metal</h3>
+                <span>Subtitle</span>
+              </div><!-- Item #1 END -->
+
+              <div class="playlist-box margin-t-standard margin-r-standard"><!-- Item #2 -->
+                <div class="layover">
+                  <img src="img/stranger.jpeg" alt="">
+                  <a href="#"><i class="text-white align-x-y far fa-play-circle"></i></a>
+                </div>
+                <h3 class="margin-t-standard margin-b-standard text-white">Stranger Things, Vol. 1 (a Netflix Original Series Soundrack)</h3>
+                <span>Kyle Dixon & Michael Stein</span>
+              </div><!-- Item #2 END -->
+
+              <div class="playlist-box margin-t-standard margin-r-standard"><!-- Item #3 -->
+                <div class="layover">
+                  <img src="img/aquietplace.jpeg" alt="">
+                  <a href="#"><i class="align-x-y text-white far fa-play-circle"></i></a>
+                </div>
+                <h3 class="margin-t-standard margin-b-standard text-white">A quiet place</h3>
+                <span>Subtitle</span>
+              </div><!-- Item #3 END -->
+
+              <div class="playlist-box margin-t-standard margin-r-standard"><!-- Item #4 -->
+                <div class="layover">
+                  <img src="img/split.jpeg" alt="">
+                  <a href="#"><i class="align-x-y text-white far fa-play-circle"></i></a>
+                </div>
+                <h3 class="margin-t-standard margin-b-standard text-white">Split</h3>
+                <span>Subtitle</span>
+              </div><!-- Item #4 END -->
+
+              <div class="playlist-box margin-t-standard margin-r-standard"><!-- Item #5 -->
+                <div class="layover">
+                  <img src="img/cure.jpeg" alt="">
+                  <a href="#"><i class="align-x-y text-white far fa-play-circle"></i></a>
+                </div>
+                <h3 class="margin-t-standard margin-b-standard text-white">A cure for wellness</h3>
+                <span>Subtitle</span>
+              </div><!-- Item #5 END -->
+
+              <div class="playlist-box margin-t-standard margin-r-standard"><!-- Item #6 -->
+                <div class="layover">
+                  <img src="img/sinister.jpeg " alt="">
+                  <a href="#"><i class="align-x-y text-white far fa-play-circle"></i></a>
+                </div>
+                <h3 class="margin-t-standard margin-b-standard text-white">Sinister</h3>
+                <span>Subtitle</span>
+              </div><!-- Item #6 END -->
+
+            </div><!-- playlist-box-container END -->
+
+          </section><!-- recently-played section (1 out of 3) END -->
+
+          <section id="created-for-you" class="padding-standard"><!-- Created-for-you section (2 out of 3)-->
+            <h2 class="margin-b-more margin-t-standard text-white">Creato per John Doe</h2>
+            <p>Più ascolti, più accurati saranno i suggerimenti.</p>
+
+            <div class="playlist-box-container text-center margin-t-more">
+
+              <div class="playlist-box margin-t-standard margin-r-standard"><!-- Item #1 -->
+                <div class="layover">
+                  <img src="img/radar.jpeg" alt="">
+                  <a href="#"><i class="align-x-y text-white far fa-play-circle"></i></a>
+                </div>
+                <h3 class="margin-t-standard margin-b-standard text-white">Relase Radar</h3>
+              </div><!-- Item #1 END -->
+
+              <div class="playlist-box margin-t-standard margin-r-standard"><!-- Item #2 -->
+                <div class="layover">
+                  <img src="img/mixdaily.jpeg" alt="">
+                  <a href="#"><i class="align-x-y text-white far fa-play-circle"></i></a>
+                </div>
+                <h3 class="margin-t-standard margin-b-standard text-white">Daily Mix</h3>
+              </div><!-- item #2 END -->
+
+            </div><!-- playlist-box-container END -->
+
+          </section><!-- created-for-you section (2 out of 3) END -->
+
+          <section id="most-popular-artists" class="padding-standard"><!-- Most-popular-artists section (3 out of 3)-->
+
+            <h2 class="margin-b-more margin-t-standard text-white">Artisti più popolari</h2>
+            <p>Più ascolti, più accurati saranno i suggerimenti.</p>
+
+            <div class="playlist-box-container text-center margin-t-more">
+
+              <div class="playlist-box margin-t-standard margin-r-standard"><!-- Item #1 -->
+                <div class="layover">
+                  <img src="img/youg.jpeg" alt="">
+                  <a href="#"><i class="align-x-y text-white far fa-play-circle"></i></a>
+                </div>
+                <h3 class="margin-t-standard margin-b-standard text-white">Lana del Rey</h3>
+              </div><!-- Item #1 END -->
+
+              <div class="playlist-box margin-t-standard margin-r-standard"><!-- Item #2 -->
+                <div class="layover">
+                  <img src="img/einaudi.jpeg" alt="">
+                  <a href="#"><i class="align-x-y text-white far fa-play-circle"></i></a>
+                </div>
+                <h3 class="margin-t-standard margin-b-standard text-white">Ludovico Einaudi</h3>
+              </div><!-- Item #2 END -->
+            </div><!-- playlist-box-container END -->
+
+          </section><!-- most-popular-artists section (3 out of 3) END -->
+
+        </section><!-- inner-content END -->
+
+      </div><!-- main-wrapper END -->
+
+    </main>
+
+    <footer>
+
+      <div class="inner-section padding-standard"><!-- footer inner section -->
+
+        <section id="footer-track-info" ><!-- Left Section (#1 out of 3) -->
+
+          <div class="align-y">
+            <img src="img/sinister.jpeg" alt="">
+          </div>
+
+          <div class="align-y text-smaller">
+            <h4 class="text-white">Sinister</h4>
+            <span class="highlight-on-hover"><a href="#">Brano Musicale</a></span>
+          </div>
+
+          <div class="text-right align-y highlight-on-hover">
+            <a href="#"><i class="far fa-folder"></i></a>
+            <a href="#"><i class="far fa-heart"></i></a>
+          </div>
+
+        </section> <!-- Left Section (#1 out of 3) END -->
+
+        <section id="footer-player-area">  <!-- Middle section (#2 out of 3) -->
+
+          <ul id="player-button-list" class="inline-list text-center text-white">
+            <li><a href="#"><i class="fas fa-random"></i></a></li>
+            <li><a href="#"><i class="fas fa-step-backward"></i></a></li>
+            <li><a href="#"><i class="far fa-play-circle"></i></a></li>
+            <li><a href="#"><i class="fas fa-step-forward"></i></a></li>
+            <li><a href="#"><i class="fas fa-redo"></i></a></li>
+          </ul>
+
+          <div class="slider-outer text-center text-smaller text-white">
+            <span class="align-y">0:25</span>
+            <div id="timeline-bar" class="custom-slider align-x-y">
+              <div class="fill-bar"></div>
             </div>
+            <span class="align-y">4:35</span>
+          </div>
 
-          </section><!-- footer-settings-box END -->
+        </section>  <!-- Middle section (#2 out of 3) END -->
 
-        </div><!-- footer inner section END -->
-      </footer>
 
-    </div><!-- outer wrapper END-->
+        <section id="footer-settings-box"><!-- Right section (#3 out of 3) -->
+          <div class="slider-outer clearfix align-x-y text-white">
+            <span><a href=""><i class="fas fa-bars"></i></a></span>
+            <span><a href=""><i class="fas fa-desktop"></i></a></span>
+            <span><a href=""><i class="fas fa-volume-up"></i></a></span>
+            <div class="custom-slider align-y">
+              <div class="fill-bar"></div>
+            </div>
+          </div>
+        </section><!-- Right section (#3 out of 3) END -->
 
-  </body>
+      </div><!-- footer inner section END -->
+
+    </footer>
+
+  </div><!-- outer wrapper END-->
+
+</body>
 </html>

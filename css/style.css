@@ -1,17 +1,15 @@
 /*
-##################
-variables,
-Reset And
-Defaults
-##################
+############################
+Variables, Reset AndDefaults
+############################
 */
 
 :root {
-  --height-medium: 90px;  /* Standard heght for footer and other elements */
-  --sidebar-width: 50px;  /* sidebar width on mobile device */
+  --height-medium: 90px;    /* Standard heght for footer and other elements */
+  --sidebar-width: 50px;    /* sidebar width on mobile device */
   --color-active: #adff2f;  /* color for active-text and other elemens*/
-  --color-light: rgba(255,255,255,0.5);
-  font-size: 10px;
+  --color-light: rgba(255,255,255,0.5);  /* primary color */
+  font-size: 10px;  /* = 1rem */
 }
 
 * {
@@ -40,11 +38,6 @@ a {
   color: inherit;
   text-decoration: none;
 }
-/*
-###########
-Typography
-###########
- */
 
 h2 {
   font-size: 3rem;
@@ -54,188 +47,118 @@ h2 {
 
 h3 {
   font-size: 2rem;
-  line-height: 3rem;
-}
-
-h2 ,
-h3 ,
-h4 {
-  color: white;
+  line-height: 2rem;
+  font-weight: 700;
 }
 
 /*
-##########
-Responsive
-And
-positioning
-##########
+##########################
+Responsive And Positioning
+##########################
 */
 
-.align-x-y {
+.align-x-y {  /* Vertically and horizontally align via position absolute */
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50% , -50%);
 }
 
-.align-y {
+.align-y {  /* Vertically align via position absolute */
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
 }
 
 .hide-on-mobile {
-  display: none;
+  display: none;  /* hidden on mobile */
 }
 .visible-on-mobile {
-  display: block;
+  display: block;  /* Visible on mobile only*/
 }
 
 @media screen and (min-width:768px) {
   .hide-on-mobile {
-    display: block;  /* elements to be displayed only on wider device */
+    display: block;  /* visible as block on wider screens*/
   }
   span.hide-on-mobile {
-    display: inline;  /* elements to be displayed only on wider device */
+    display: inline;  /* visible as inline on wider screens */
   }
   .visible-on-mobile {
-    display: none;
+    display: none;  /* Hidden on wider screens */
   }
 }
 
 /*
-#########
-Margin,
-padding,
-sizez
-#########
+######################
+Margin, padding, sizez
+######################
 */
 
-.outer-wrapper {
-  margin:auto;
-  background-color: red; /* DEBUG:  */
-}
+.padding-standard { padding: 1rem; }
+.padding-t-standard { padding-top: 1rem; }
+.padding-b-standard { padding-bottom: 1rem; }
 
-.padding-standard {
-  padding: 1rem;
-}
-.padding-more {
-  padding: 2rem;
-}
-.padding-t-more {
-  padding-top: 2rem;
-}
-.padding-l-r-standard {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
+.padding-more {  padding: 2rem; }
+.padding-t-more {  padding-top: 2rem; }
 .padding-l-r-more {
   padding-left: 2rem;
   padding-right: 2rem;
 }
-.padding-t-b-standard {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-.padding-t-b-more {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
 
-.margin-standard {
-  margin: 1rem;
-}
+.margin-t-standard {  margin-top: 1rem; }
+.margin-r-standard {  margin-right: 1rem; }
+.margin-b-standard {  margin-bottom: 1rem; }
 
-.margin-more {
-  margin: 2rem;
-}
-.margin-b-standard {
-  margin-bottom: 1rem;
-}
-.margin-t-standard {
-  margin-top: 1rem;
-}
-.margin-r-standard {
-  margin-right: 1rem;
-}
-.margin-b-more {
-  margin-bottom: 2rem;
-}
-.margin-t-more {
-  margin-top: 2rem;
-}
-.margin-t-b-more {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-.margin-r-more {
-  margin-right: 2rem;
-}
-.margin-l-more {
-  margin-left: 2rem;
-}
+.margin-t-more {  margin-top: 2rem; }
+.margin-r-more {  margin-right: 2rem; }
+.margin-b-more {  margin-bottom: 2rem; }
+.margin-l-more {  margin-left: 2rem; }
 
 /*
-#########
-bits and
-pieces
-#########
+###############
+bits and pieces
+###############
 */
 
 ul.inline-list li {
   display: inline-block;
 }
 
-ul li.active {
+ul li.active {  /* green border on menu items is injected via ::before */
   position: relative
 }
 ul li.active::before {
   position: absolute;
   content: "";
+  display: inline-block;
   background-color: var(--color-active);
 }
 
-.text-center {
-  text-align: center;
-}
+.text-center {  text-align: center; }
 
-.text-right {
-  text-align: right;
-}
+.text-right {  text-align: right; }
 
-.text-uppercase {
-text-transform: uppercase;
-}
+.text-smaller {  font-size: 0.8em; }
 
-.text-smaller {
-  font-size: 0.8em;
-}
+.text-uppercase {  text-transform: uppercase; }
 
-.custom-plus-icon::after {
-  content: "\002B";
-  display:inline-block;
-  width:4rem;
-  height:4rem;
-  line-height:4rem;
-  text-align:center;
-  background-color:var(--color-light);
-  vertical-align: middle;
-  color:black;
-  font-size: 4rem;
-}
-li:hover .custom-plus-icon::after {
-  background-color: white;
-}
+.text-white {  color: white; }
 
-.custom-plus-icon+span {
-  font-size: 1.2em;
-  font-weight: bold;
+.highlight-on-hover a:hover {  /* Elements that get highlighet on hover*/
+  color: white;
+}
+.highlight-on-hover a img {
+  opacity: 0.5;
+}
+.highlight-on-hover a:hover img {
+  opacity: 1;
 }
 
 /*
-########
-SIDEBAR
-########
+#############
+Left Sidebar
+#############
 */
 
 section#sidebar-left {
@@ -252,43 +175,60 @@ section#sidebar-left {
   justify-content: space-between;
 }
 
-
-header nav ul li {  /* all list item inside the header menu */
+header nav ul li {
+/* NOTE: list item's height of both sidebar menu (on left) and main menu (on right) matches half the height of the call-to-action bar. In this way, the content of the two menus are always aligned above the fold.
+*/
   height: calc( (var(--height-medium) - 1rem ) / 2);
-  line-height: calc( (var(--height-medium) - 1rem ) / 2);
+  line-height: calc( (var(--height-medium) - 1rem ) / 2); /* vertically align*/
 }
-header nav ul li.hide-on-mobile {  /* i.e. list item containing desktop logo*/
-  height: calc( var(--height-medium) - 2rem );
-  line-height: calc( var(--height-medium) - 2rem );
+header nav ul li.hide-on-mobile { /* i.e. list item containing desktop logo*/
+  height: calc( var(--height-medium) - 2rem ); /* spans two row (...and gets aligned with the call-to-action bar)*/
+  line-height: calc( var(--height-medium) - 2rem ); /* vertically align*/
 }
 
 header nav ul li img {
   max-height: 70%;
 }
 
-.highlight-on-hover a:hover {
-  color: white;
-}
-.highlight-on-hover a img {
-  opacity: 0.5;
-}
-.highlight-on-hover a:hover img {
-  opacity: 1;
-}
-
-header nav ul li:nth-child(n+3) img {  /* any list item starting from 3rd (i.e. excluding logos)*/
+header nav ul li:nth-child(n+3) img {  /* any list item starting from 3rd (i.e. excluding logos) */
   max-height: 30px;
   vertical-align: middle;
-}
-
-
-header nav ul li:nth-child(n+3):hover img {
-  /* opacity: 1; */
 }
 
 #sidebar-playlist-area {
   flex-grow: 1;
   overflow-y: scroll;
+}
+
+#sidebar-playlist-area .custom-plus-icon::after {
+  content: "\002B";
+  display:inline-block;
+  width:4rem;
+  height:4rem;
+  line-height:4rem;
+  font-size: 4rem;
+  background-color:var(--color-light);
+  vertical-align: middle;
+  color:black;
+}
+#sidebar-playlist-area li:hover .custom-plus-icon::after {
+  background-color: white;
+}
+
+#sidebar-playlist-area .custom-plus-icon+span {  /* Span following the custom plus icon */
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+
+#sidebar-user-bar img[src*="download"] {  /* "download" icon */
+  max-height: 20px;
+}
+#sidebar-user-bar img[src*="profile"] {  /* profile picture */
+  width: 30px;
+  height: 30px;
+  background-color: var(--color-light);
+  border-radius: 50%;
 }
 
 @media screen and (min-width:768px) {
@@ -304,8 +244,7 @@ header nav ul li:nth-child(n+3):hover img {
     padding: 2rem;  /* more padding on tablet and wider devices*/
   }
 
-  header nav ul li.active::before {
-    display: inline-block;
+  header nav ul li.active::before {  /* Green border on active menu item */
     width: 3px;
     height: 40px;
     left: -2rem;
@@ -313,37 +252,13 @@ header nav ul li:nth-child(n+3):hover img {
     transform: translateY(-50%);
   }
 
-  #sidebar-left h3 {
-    line-height: 2rem;
-  }
-
   #sidebar-user-bar h3.hide-on-mobile ,
   #sidebar-user-bar img ,
   #sidebar-user-bar span {
     display: inline-block;
+    vertical-align: middle;
   }
-
 }
-
-
-#sidebar-user-bar img[src*="download"] {
-  max-height: 20px;
-}
-#sidebar-user-bar img[src*="profile"] {
-  width: 30px;
-  height: 30px;
-  background-color: var(--color-light);
-  border-radius: 50%;
-
-}
-
-#sidebar-user-bar h3 ,
-#sidebar-user-bar img ,
-#sidebar-user-bar span {
-  vertical-align: middle;
-}
-
-
 
 /*
 ###############
@@ -353,9 +268,9 @@ call to action
 
 #call-to-action {
   position: fixed;
-  z-index: 2;
-  left: var(--sidebar-width);
+  left: var(--sidebar-width); /* right of the sidebar */
   right: 0;
+  z-index: 2; /* Keep on top */
   height: var(--height-medium);
   background-color: rgba(0, 0, 0, 0.25);
 }
@@ -371,41 +286,33 @@ call to action
 #call-to-action a {
   border-radius: 25px;
   border: 2px solid white;
-  color: white;
 }
 
 /*
 #############
-inner content
+Main Content
 #############
 */
 
 #inner-content {
-  padding-top: var(--height-medium);
-  width: calc(100% - var(--sidebar-width));
+  padding-top: var(--height-medium); /* same as top bar*/
+  width: calc(100% - var(--sidebar-width)); /* = 100% - sidebar */
   height: calc(100vh - var(--height-medium));  /* = 100vh - footer */
   float: left;
   background-color: #141922;
   overflow: auto;
 }
 
-
-
 nav#main-menu ul {
   font-size: 2rem;
 }
 
 nav#main-menu ul li {
-  height: calc( (var(--height-medium) - 1rem ) / 2);
-  line-height: calc( (var(--height-medium) - 1rem ) / 2);
+  height: calc( (var(--height-medium) - 1rem ) / 2); /* matches sidebar menu (see note on line 179)*/
+  line-height: calc( (var(--height-medium) - 1rem ) / 2); /* vertically align */
 }
 
-ul li:hover {
-  /* color: white; */
-}
-
-#main-menu ul li.active::before {
-  display: inline-block;
+#main-menu ul li.active::before {  /* Green border on active item */
   width: 40px;
   height: 3px;
   bottom: 0;
@@ -420,40 +327,10 @@ ul li:hover {
   justify-content: flex-start;
 }
 
-.playlist-box {
+.playlist-box {                        /* sizes on mobile (default)*/
   width: calc( (100% / 2) - 1rem);
   flex: 0 0 auto;
 }
-
-.playlist-box .layover {
-  position: relative;
-}
-
-.playlist-box .layover a {
-  display: none;
-}
-
-.playlist-box .layover:hover a {
-  display: block;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.25);
-}
-
-.playlist-box .layover a i {
-  color: white;
-  font-size: 8rem;
-}
-
-.playlist-box .layover img {
-  display: block;
-  width: 100%;
-}
-
-
 @media screen and (min-width:992px) {  /* sizes on tablet */
   .playlist-box {
     width: calc((100% / 4) - 1rem);
@@ -465,13 +342,33 @@ ul li:hover {
   }
 }
 
+.playlist-box .layover {
+  position: relative;
+}
+
+.playlist-box .layover a {
+  display: none;  /* not whown by default */
+}
+.playlist-box .layover:hover a {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.25);
+  font-size: 8rem;
+}
+
+.playlist-box .layover img {
+  display: block;
+  width: 100%;
+}
 
 /*
-#############
-FOOTER
-COMMON
-RULES
-#############
+###################
+FOOTER COMMON RULES
+###################
 */
 
 footer {
@@ -521,38 +418,31 @@ footer .slider-outer:hover .custom-slider .fill-bar::after {
 }
 
 /*
-#######
-FOOTER
-TRACK
-INFO
-#######
+##################
+FOOTER TRACK INFO
+left section
+of the footer
+##################
 */
-
 
 #footer-track-info {
   position: relative;
 }
 
-#footer-track-info > div > div {
-
-}
-
-#footer-track-info > div > div:nth-child(1) {
+#footer-track-info > div:nth-child(1) {
   width: 35%;
   left:0;
 }
-#footer-track-info > div > div:nth-child(2) {
+#footer-track-info > div:nth-child(2) {
   width: 40%;
-  left: 35%;
-  margin-left: 5%;
+  left: 40%;  /* 5% offset on left */
 }
-#footer-track-info > div > div:nth-child(3) {
+#footer-track-info > div:nth-child(3) {
   width: 20%;
   right: 0;
 }
 
 #footer-track-info img {
-  max-height: calc(var(--height-medium) - 2rem);
   max-width: 100%;
   display: block;
 }
@@ -561,15 +451,13 @@ INFO
   text-decoration: underline;
 }
 
-
 /*
-#######
-FOOTER
-PLAYER
-AREA
-#######
+##################
+FOOTER PLAYER AREA
+Middle section
+of the footer
+##################
 */
-
 
 #footer-player-area {
   flex: 0 2 600px;
@@ -577,72 +465,62 @@ AREA
 
 #player-button-list {  /* button bar on top*/
   height: calc((var(--height-medium) - 2rem) / 2);  /* takes 1/2 height of footer*/
-  line-height: calc((var(--height-medium) - 2rem) / 2); /* align */
-  font-size: 1.8rem;
-  color: white;
+  line-height: calc((var(--height-medium) - 2rem) / 2); /* vertically align content */
 }
-
 
 #player-button-list > li:nth-child(3) {
   font-size: 2.5rem;  /* play button is slighly bigger*/
 }
 #player-button-list > li:nth-child(3):hover {
-  transform: scale(1.2);
+  transform: scale(1.2); /* ...even bigger on hover */
 }
 
 #player-button-list > li:not(:last-child) {
   margin-right: 1.2vw;
 }
 
-
 #footer-player-area .slider-outer {  /* bottom bar with slider and time */
   height: calc((var(--height-medium) - 2rem) / 2); /* takes 1/2 height of footer*/
   position: relative;
 }
 
-#footer-player-area .slider-outer > span {
+#footer-player-area .slider-outer > span {  /* timer at sides of slider */
   width: 35px;
-  color: white;
 }
-
-#footer-player-area .slider-outer > span:first-child {  /* current time*/
+#footer-player-area .slider-outer > span:first-child {  /* left timer*/
   left: 0;
 }
-#footer-player-area .slider-outer .custom-slider {  /* actual slider */
-  width: calc(100% - 70px);
-
-}
-
-#footer-player-area .slider-outer > span:last-child {  /* total time */
+#footer-player-area .slider-outer > span:last-child {  /* right timer */
   right: 0;
 }
 
+#footer-player-area .slider-outer .custom-slider {  /* actual slider */
+  width: calc(100% - 70px);  /* = 100% - timers */
+}
 
 /*
-#######
-FOOTER
-SETTINGS
-BOX
-#######
+###################
+FOOTER SETTINGS BOX
+Right section
+of the footer
+###################
 */
-
 
 section#footer-settings-box {
   position: relative;
   width: 100%;
 }
 
-section#footer-settings-box > .slider-outer {
+#footer-settings-box > .slider-outer {
   width: 100%;
 }
 
-section#footer-settings-box > .slider-outer > span {
+#footer-settings-box > .slider-outer > span { /* buttons on the left ov the slider */
   width: calc(50% / 3);
   float: left;
-  color: white;
 }
 
-#footer-settings-box .custom-slider {
+#footer-settings-box .custom-slider {  /* actual slider */
   right: 0;
   width:50%;
 }
