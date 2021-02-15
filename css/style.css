@@ -376,9 +376,35 @@ nav#main-menu ul li {
   flex: 0 0 auto;
   margin-bottom: 1rem;
   margin-right: 1rem;
+
 }
 
-.playlist-box img {
+.playlist-box .layover {
+  position: relative;
+  /* display: contents; */
+}
+
+.playlist-box .layover a {
+  display: none;
+}
+
+.playlist-box .layover:hover a {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.playlist-box .layover a i {
+  color: white;
+  font-size: 8rem;
+}
+
+.playlist-box .layover img {
+  display: block;
   width: 100%;
 }
 
@@ -427,8 +453,32 @@ section#footer-settings-box {
 footer .custom-slider {
   height:4px;
   border-radius: 2px;
+  background-color: var(--color-light);
+  cursor: pointer;
+}
+footer .custom-slider .fill-bar {
+  position: relative;
+  height: 100%;
+  width:20%;
+  background-color: inherit;
+  border-radius: inherit;
 }
 
+footer .slider-outer:hover .custom-slider .fill-bar {
+  background-color: var(--color-active);
+}
+
+footer .slider-outer:hover .custom-slider .fill-bar::after {
+  content: "";
+  display: inline-block;
+  position: absolute; right:0;
+  top:50%;
+  transform: translate(50% , -50%);
+  width:15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: white;
+}
 
 /*
 #######
@@ -496,23 +546,25 @@ AREA
 }
 
 
-#timeline-outer {  /* bottom bar with slider and time */
+#footer-player-area .slider-outer {  /* bottom bar with slider and time */
   height: calc((var(--height-medium) - 2rem) / 2); /* takes 1/2 height of footer*/
   position: relative;
 }
 
-#timeline-outer > span:not(span.custom-slider) {
+#footer-player-area .slider-outer > span {
   width: 35px;
+  color: white;
 }
 
-#timeline-outer > span:first-child {  /* current time*/
+#footer-player-area .slider-outer > span:first-child {  /* current time*/
   left: 0;
 }
-#timeline-outer .custom-slider {  /* actual slider */
+#footer-player-area .slider-outer .custom-slider {  /* actual slider */
   width: calc(100% - 70px);
-  background-image: linear-gradient(to right , white 50%, lightgray 50%);
+
 }
-#timeline-outer > span:last-child {  /* total time */
+
+#footer-player-area .slider-outer > span:last-child {  /* total time */
   right: 0;
 }
 
@@ -531,18 +583,16 @@ section#footer-settings-box {
   width: 100%;
 }
 
-section#footer-settings-box > .clearfix {
+section#footer-settings-box > .slider-outer {
   width: 100%;
 }
 
-section#footer-settings-box > .clearfix > span:not(.custom-slider) {
+section#footer-settings-box > .slider-outer > span {
   width: calc(50% / 3);
-}
-section#footer-settings-box > .clearfix > span {
   float: left;
 }
 
 #footer-settings-box .custom-slider {
+  right: 0;
   width:50%;
-  background-image: linear-gradient(to right , white 50%, lightgray 50%);
 }
