@@ -231,6 +231,10 @@ header nav ul li:nth-child(n+3) img {  /* any list item starting from 3rd (i.e. 
   border-radius: 50%;
 }
 
+#sidebar-user-bar hr {
+  border-color: var(--color-light);
+}
+
 @media screen and (min-width:768px) {
   :root {
   --sidebar-width: 230px;  /* sidebar width on tablet and wider device */
@@ -304,7 +308,7 @@ Main Content
 }
 
 nav#main-menu ul {
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 nav#main-menu ul li {
@@ -374,12 +378,14 @@ FOOTER COMMON RULES
 footer {
   width: 100%;
   height: var(--height-medium);
-  background-color: #282828;
 }
 
 footer > .inner-section {
   display: flex;
   justify-content: space-between;
+  background-color: #282828;
+  position: relative;
+  z-index: 2;
 }
 
 section#footer-track-info ,
